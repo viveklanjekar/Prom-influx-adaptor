@@ -17,6 +17,7 @@ RUN apk add --no-cache git && \
     go install -v /go/src/github.com/prometheus/prometheus/documentation/examples/remote_storage/remote_storage_adapter && \
     cd / && \
     apk del git && \
-    rm -rf /go/src/github.com /var/cache/apk
+    rm -rf /go/src/github.com /var/cache/apk && \
+    chmod +x /run.sh
 
 CMD ["/run.sh"]
