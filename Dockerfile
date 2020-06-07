@@ -12,7 +12,7 @@ COPY run.sh /
 RUN apk add --no-cache git && \
     mkdir -p /go/src/github.com/prometheus && \
     cd /go/src/github.com/prometheus && \
-    git clone --branch v2.5.0 --depth 1 https://github.com/prometheus/prometheus.git && \
+    git clone --branch v2.2.1 --depth 1 https://github.com/prometheus/prometheus.git && \
     go get -d -v /go/src/github.com/prometheus/prometheus/documentation/examples/remote_storage/remote_storage_adapter && \
     go install -v /go/src/github.com/prometheus/prometheus/documentation/examples/remote_storage/remote_storage_adapter && \
     cd / && \
